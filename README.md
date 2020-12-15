@@ -3,9 +3,12 @@ Estimation methods for heavy-tail distributions
 
 See "Independent Approximates enable estimation of heavy tail distributions
 
+The software is provided under GPL v3 license. Proprietary licenses available upon request.
+
 Kenric P. Nelson
 President
 Photrek, LLC
+kenric.nelson@gmail.com
 
 Abstract – Independent Approximates (IAs) are proven to enable a closed-form estimation of the generalized Pareto and Student’s t distributions, while a broader proof including the Levy stable distributions is described for future research. (IAs) are selected from independent, identically distributed samples by partitioning the samples into groups of n and retaining the median of the samples in those groups which have approximately equal samples. The marginal distribution along the diagonal of equal values is has density proportional to the nth power of the original density. This nth-power-distribution, which the IAs approximate, has faster tail decay enabling closed-form estimation of its moments and retains a functional relationship with the original density. Computational experiments with between 1000 to 100,000  Student’s t samples are described. With 10,000 samples the estimations have a relative bias less than 0.01 and a relative precision less than ±0.1.
 
