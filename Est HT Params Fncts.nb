@@ -28,8 +28,21 @@ Estimating Mean, Scale and Coupling of Heavy-Tail Distributions\
   3.80966845867024*^9}},ExpressionUUID->"1fd37918-dbf8-413a-b66c-\
 8eeeb04e7f0b"],
 
-Cell[TextData[StyleBox["\[Copyright]  Copyright 2020 Kenric P. Nelson\n\
-Proprietary All Rights Reserved",
+Cell[TextData[StyleBox["\[Copyright]  Copyright 2020  Photrek, LLC \n
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+",
  FontSlant->"Italic"]], "Text",
  CellChangeTimes->{{3.809668487415203*^9, 
   3.809668510544283*^9}},ExpressionUUID->"f57a2eef-b126-4dce-a682-\
