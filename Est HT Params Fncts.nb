@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    121513,       2387]
-NotebookOptionsPosition[    119502,       2346]
-NotebookOutlinePosition[    119895,       2362]
-CellTagsIndexPosition[    119852,       2359]
+NotebookDataLength[    121943,       2389]
+NotebookOptionsPosition[    119935,       2348]
+NotebookOutlinePosition[    120327,       2364]
+CellTagsIndexPosition[    120284,       2361]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,24 +28,20 @@ Estimating Mean, Scale and Coupling of Heavy-Tail Distributions\
   3.80966845867024*^9}},ExpressionUUID->"1fd37918-dbf8-413a-b66c-\
 8eeeb04e7f0b"],
 
-Cell[TextData[StyleBox["\[Copyright]  Copyright 2020  Photrek, LLC \n
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-",
+Cell[TextData[StyleBox["\[Copyright]  Copyright 2020 Photrek, Kenric P. \
+Nelson\nGPL v3 license. Proprietary licenses available upon request.\n\n\n    \
+This program is free software: you can redistribute it and/or modify\n    it \
+under the terms of the GNU General Public License as published by\n    the \
+Free Software Foundation, either version 3 of the License, or\n    (at your \
+option) any later version.\n\n    This program is distributed in the hope \
+that it will be useful,\n    but WITHOUT ANY WARRANTY; without even the \
+implied warranty of\n    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. \
+ See the\n    GNU General Public License for more details.\n\n    You should \
+have received a copy of the GNU General Public License\n    along with this \
+program.  If not, see <https://www.gnu.org/licenses/>.\n",
  FontSlant->"Italic"]], "Text",
- CellChangeTimes->{{3.809668487415203*^9, 
-  3.809668510544283*^9}},ExpressionUUID->"f57a2eef-b126-4dce-a682-\
+ CellChangeTimes->{{3.809668487415203*^9, 3.809668510544283*^9}, 
+   3.826739498501492*^9},ExpressionUUID->"f57a2eef-b126-4dce-a682-\
 737e598e78d4"],
 
 Cell[TextData[{
@@ -349,7 +345,7 @@ Cell[BoxData[{
    3.811488571720373*^9}, 3.811488735501358*^9, {3.8114888066073227`*^9, 
    3.811488809726366*^9}},
  CellLabel->"In[2]:=",ExpressionUUID->"0edce7f9-b1bd-4e35-a568-b63a7047e279"]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1538,7 +1534,7 @@ Cell[BoxData[{
    3.811407607807864*^9, 3.81140760945691*^9}, 3.811428984613902*^9, 
    3.811429123181746*^9, {3.8114292563816643`*^9, 3.811429256386853*^9}},
  CellLabel->"In[8]:=",ExpressionUUID->"f6b8a2a7-aa1b-46b2-9dd9-cdf4f56c517b"]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -2060,23 +2056,22 @@ Cell[BoxData[{
             "Select", " ", "those", " ", "triplets", " ", "which", " ", "are",
               " ", "on", " ", "specific", " ", "diagonals"}], " ", "*)"}], 
            "\[IndentingNewLine]", 
-           RowBox[{"(*", 
+           RowBox[{
             RowBox[{
              RowBox[{
-              RowBox[{"Median", "[", "#", "]"}], "&"}], "/@"}], "*)"}], 
-           "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"Select", "[", "\[IndentingNewLine]", 
-             RowBox[{
+              RowBox[{"Median", "[", "#", "]"}], "&"}], "/@", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Select", "[", "\[IndentingNewLine]", 
               RowBox[{
                RowBox[{
-                RowBox[{"{", 
-                 RowBox[{
+                RowBox[{
+                 RowBox[{"{", 
                   RowBox[{
-                  "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
-                   ",", "\[IndentingNewLine]", 
-                  RowBox[{
-                   RowBox[{"(", 
+                   RowBox[{
+                   "#", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", "\[IndentingNewLine]", 
+                   RowBox[{
+                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"-", "2"}], 
@@ -2084,11 +2079,11 @@ Cell[BoxData[{
                     RowBox[{"Quotient", "[", 
                     RowBox[{"i", ",", "3"}], "]"}], "]"}]}], "+", "1"}], 
                     ")"}], 
-                   RowBox[{
-                   "#", "\[LeftDoubleBracket]", "2", 
+                    RowBox[{
+                    "#", "\[LeftDoubleBracket]", "2", 
                     "\[RightDoubleBracket]"}]}], ",", "\[IndentingNewLine]", 
-                  RowBox[{
-                   RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"(", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"-", "2"}], 
@@ -2096,39 +2091,31 @@ Cell[BoxData[{
                     RowBox[{"Mod", "[", 
                     RowBox[{"i", ",", "2"}], "]"}], "]"}]}], "+", "1"}], 
                     ")"}], 
-                   RowBox[{
-                   "#", "\[LeftDoubleBracket]", "3", 
-                    "\[RightDoubleBracket]"}]}]}], "}"}], "&"}], "/@", 
-               "\[IndentingNewLine]", 
-               RowBox[{"(*", " ", 
-                RowBox[{
-                "Select", " ", "triplets", " ", "whose", " ", "absolute", " ",
-                  "values", " ", "are", " ", "within", " ", "range"}], " ", 
-                "*)"}], "\[IndentingNewLine]", 
-               RowBox[{"Select", "[", "\[IndentingNewLine]", 
-                RowBox[{
-                 RowBox[{"Partition", "[", "\[IndentingNewLine]", 
-                  RowBox[{
-                  "permutedSample", ",", "\[IndentingNewLine]", "dimensions", 
-                   ",", "1"}], "]"}], ",", "\[IndentingNewLine]", 
-                 RowBox[{
-                  RowBox[{
-                   RowBox[{"(", 
                     RowBox[{
-                    RowBox[{"Max", "[", 
-                    RowBox[{"Abs", "[", "#", "]"}], "]"}], "-", 
-                    RowBox[{"Min", "[", 
-                    RowBox[{"Abs", "[", "#", "]"}], "]"}]}], ")"}], 
-                   "\[LessEqual]", " ", "range"}], "&"}]}], 
-                "\[IndentingNewLine]", "]"}]}], ",", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{
-                RowBox[{"(", 
+                    "#", "\[LeftDoubleBracket]", "3", 
+                    "\[RightDoubleBracket]"}]}]}], "}"}], "&"}], "/@", 
+                "\[IndentingNewLine]", 
+                RowBox[{"(*", " ", 
                  RowBox[{
-                  RowBox[{"Max", "[", "#", "]"}], "-", 
-                  RowBox[{"Min", "[", "#", "]"}]}], ")"}], "\[LessEqual]", 
-                " ", "range"}], "&"}]}], "\[IndentingNewLine]", "]"}], ",", 
-            "\[IndentingNewLine]", 
+                 "Removed", " ", 
+                  "\"\<Select triplets whose absolute values are within range\
+\>\""}], " ", "*)"}], "\[IndentingNewLine]", 
+                RowBox[{"(*", " ", 
+                 RowBox[{
+                 "Partition", " ", "data", " ", "into", " ", "sets", " ", 
+                  "of", " ", "3"}], " ", "*)"}], "\[IndentingNewLine]", 
+                RowBox[{"Partition", "[", "\[IndentingNewLine]", 
+                 RowBox[{
+                 "permutedSample", ",", "\[IndentingNewLine]", "dimensions", 
+                  ",", "1"}], "]"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"Max", "[", "#", "]"}], "-", 
+                   RowBox[{"Min", "[", "#", "]"}]}], ")"}], "\[LessEqual]", 
+                 " ", "range"}], "&"}]}], "\[IndentingNewLine]", "]"}]}], ",",
+             "\[IndentingNewLine]", 
             RowBox[{"{", 
              RowBox[{"i", ",", "4"}], "}"}]}], "]"}]}], ",", 
          "\[IndentingNewLine]", "numPermutations"}], "]"}], "//", "Flatten"}],
@@ -2352,13 +2339,15 @@ Cell[BoxData[{
    3.81141370525984*^9, 3.811413719179784*^9}, {3.811428488012796*^9, 
    3.811428506332602*^9}, {3.811428587603627*^9, 3.81142867675498*^9}, {
    3.811428817556497*^9, 3.8114288249151487`*^9}, {3.811429256401415*^9, 
-   3.811429256403819*^9}},
- CellLabel->"In[15]:=",ExpressionUUID->"7eacef9c-7477-4ff2-96cd-edbce6a60a47"]
+   3.811429256403819*^9}, {3.826764000546072*^9, 3.826764004435409*^9}, {
+   3.8267706636425734`*^9, 
+   3.826770711585422*^9}},ExpressionUUID->"7eacef9c-7477-4ff2-96cd-\
+edbce6a60a47"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 755},
-WindowMargins->{{Automatic, 23}, {Automatic, 11}},
+WindowMargins->{{48, Automatic}, {Automatic, 6}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"049d35b7-abd2-4e2a-817b-f0d915aec296"
@@ -2376,30 +2365,30 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 266, 6, 105, "Section",ExpressionUUID->"1fd37918-dbf8-413a-b66c-8eeeb04e7f0b"],
-Cell[849, 30, 264, 5, 58, "Text",ExpressionUUID->"f57a2eef-b126-4dce-a682-737e598e78d4"],
-Cell[1116, 37, 1264, 22, 242, "Text",ExpressionUUID->"e37a4777-ec6f-4b98-9e9b-00482f1dc428"],
+Cell[849, 30, 1014, 14, 403, "Text",ExpressionUUID->"f57a2eef-b126-4dce-a682-737e598e78d4"],
+Cell[1866, 46, 1264, 22, 242, "Text",ExpressionUUID->"e37a4777-ec6f-4b98-9e9b-00482f1dc428"],
 Cell[CellGroupData[{
-Cell[2405, 63, 177, 3, 54, "Subsection",ExpressionUUID->"1334e682-8061-4ca9-bfe0-823ea1f78a7b"],
-Cell[2585, 68, 643, 17, 219, "Text",ExpressionUUID->"601da92a-72b2-44cd-a157-1bf375514ee2"],
-Cell[3231, 87, 1175, 23, 73, "Input",ExpressionUUID->"6919b575-cb7e-4124-be6f-2fd7588b11c7"],
-Cell[4409, 112, 10979, 225, 1228, "Input",ExpressionUUID->"0edce7f9-b1bd-4e35-a568-b63a7047e279"]
+Cell[3155, 72, 177, 3, 54, "Subsection",ExpressionUUID->"1334e682-8061-4ca9-bfe0-823ea1f78a7b"],
+Cell[3335, 77, 643, 17, 219, "Text",ExpressionUUID->"601da92a-72b2-44cd-a157-1bf375514ee2"],
+Cell[3981, 96, 1175, 23, 73, "Input",ExpressionUUID->"6919b575-cb7e-4124-be6f-2fd7588b11c7"],
+Cell[5159, 121, 10979, 225, 1228, "Input",ExpressionUUID->"0edce7f9-b1bd-4e35-a568-b63a7047e279"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16175, 351, 163, 3, 54, "Subsection",ExpressionUUID->"9526400b-f859-4e01-84b1-e56264e2f9e5"],
+Cell[16341, 356, 1892, 34, 70, "Text",ExpressionUUID->"b13805b6-a4bb-4178-83b6-255bd0fa4e30"],
+Cell[18236, 392, 38944, 675, 70, "Input",ExpressionUUID->"95d64087-d76d-468f-9869-f6395521c94f"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[15425, 342, 163, 3, 38, "Subsection",ExpressionUUID->"9526400b-f859-4e01-84b1-e56264e2f9e5"],
-Cell[15591, 347, 1892, 34, 472, "Text",ExpressionUUID->"b13805b6-a4bb-4178-83b6-255bd0fa4e30"],
-Cell[17486, 383, 38944, 675, 2585, "Input",ExpressionUUID->"95d64087-d76d-468f-9869-f6395521c94f"]
+Cell[57217, 1072, 164, 3, 38, "Subsection",ExpressionUUID->"2662aced-5062-4917-b71f-e8ee44b03454"],
+Cell[57384, 1077, 23816, 458, 2353, "Input",ExpressionUUID->"f6b8a2a7-aa1b-46b2-9dd9-cdf4f56c517b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81237, 1540, 169, 3, 54, "Subsection",ExpressionUUID->"a71e8706-6e99-4833-8f0c-42765626dcea"],
+Cell[81409, 1545, 20068, 420, 70, "Input",ExpressionUUID->"a215ea0b-5360-4812-a572-7a4cab257fb0"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[56467, 1063, 164, 3, 38, "Subsection",ExpressionUUID->"2662aced-5062-4917-b71f-e8ee44b03454"],
-Cell[56634, 1068, 23816, 458, 2353, "Input",ExpressionUUID->"f6b8a2a7-aa1b-46b2-9dd9-cdf4f56c517b"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[80487, 1531, 169, 3, 38, "Subsection",ExpressionUUID->"a71e8706-6e99-4833-8f0c-42765626dcea"],
-Cell[80659, 1536, 20068, 420, 2285, "Input",ExpressionUUID->"a215ea0b-5360-4812-a572-7a4cab257fb0"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[100764, 1961, 174, 3, 38, "Subsection",ExpressionUUID->"3b0bf7ca-7cd3-43c1-a4a7-969630adc42a"],
-Cell[100941, 1966, 18533, 376, 1594, "Input",ExpressionUUID->"7eacef9c-7477-4ff2-96cd-edbce6a60a47"]
+Cell[101514, 1970, 174, 3, 38, "Subsection",ExpressionUUID->"3b0bf7ca-7cd3-43c1-a4a7-969630adc42a"],
+Cell[101691, 1975, 18216, 369, 1522, "Input",ExpressionUUID->"7eacef9c-7477-4ff2-96cd-edbce6a60a47"]
 }, Open  ]]
 }, Open  ]]
 }
