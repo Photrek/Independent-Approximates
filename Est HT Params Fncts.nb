@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    122541,       2403]
-NotebookOptionsPosition[    120528,       2362]
-NotebookOutlinePosition[    120920,       2378]
-CellTagsIndexPosition[    120877,       2375]
+NotebookDataLength[    124104,       2426]
+NotebookOptionsPosition[    122087,       2385]
+NotebookOutlinePosition[    122483,       2401]
+CellTagsIndexPosition[    122440,       2398]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -117,8 +117,7 @@ Cell[BoxData[
      RowBox[{"-", "\[Infinity]"}], "<", "\[Mu]", "<", "\[Infinity]"}], "&&", 
     RowBox[{"0", "<", "n", "<", "\[Infinity]"}]}]}], ";"}]], "Input",
  CellChangeTimes->{{3.809668392522032*^9, 3.809668396981798*^9}},
- CellLabel->
-  "In[110]:=",ExpressionUUID->"6919b575-cb7e-4124-be6f-2fd7588b11c7"],
+ CellLabel->"In[66]:=",ExpressionUUID->"6919b575-cb7e-4124-be6f-2fd7588b11c7"],
 
 Cell[BoxData[{
  RowBox[{
@@ -284,19 +283,37 @@ Cell[BoxData[{
            RowBox[{"Around", "[", "allCouplingEsts", "]"}]}], 
           "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}]}], ";",
        "\[IndentingNewLine]", 
-      RowBox[{"Print", "[", 
-       RowBox[{"\"\<Mean: \>\"", ",", 
-        RowBox[{"meanEstimate", "\[LeftDoubleBracket]", 
-         RowBox[{"\"\<firstLast\>\"", ",", "2", ",", "1"}], 
-         "\[RightDoubleBracket]"}], ",", "\[IndentingNewLine]", 
-        "\"\<  Scale: \>\"", ",", 
-        RowBox[{"scaleEstimate", "\[LeftDoubleBracket]", 
-         RowBox[{"\"\<firstLast\>\"", ",", "2"}], "\[RightDoubleBracket]"}], 
-        ",", "\[IndentingNewLine]", "\"\<  Coupling: \>\"", ",", 
-        RowBox[{
-        "couplingEstimate", "\[LeftDoubleBracket]", "2", 
-         "\[RightDoubleBracket]"}]}], "\[IndentingNewLine]", "]"}], ";", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"(*", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Print", "[", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"#", "\[Rule]", 
+              RowBox[{"OptionValue", "[", "#", "]"}]}], ")"}], "&"}], "/@", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<sampleRange\>\"", ",", "\"\<iterations\>\"", ",", 
+             "\"\<prec\>\"", ",", "\"\<centeredQ\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<scaledQ\>\"", ",", 
+             "\"\<saveXeqX\>\"", ",", "\"\<meanTripletsQ\>\""}], "}"}]}], 
+          ")"}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Print", "[", 
+         RowBox[{"\"\<Mean: \>\"", ",", 
+          RowBox[{"meanEstimate", "\[LeftDoubleBracket]", 
+           RowBox[{"\"\<firstLast\>\"", ",", "2", ",", "1"}], 
+           "\[RightDoubleBracket]"}], ",", "\[IndentingNewLine]", 
+          "\"\<  Scale: \>\"", ",", 
+          RowBox[{"scaleEstimate", "\[LeftDoubleBracket]", 
+           RowBox[{"\"\<firstLast\>\"", ",", "2"}], "\[RightDoubleBracket]"}],
+           ",", "\[IndentingNewLine]", "\"\<  Coupling: \>\"", ",", 
+          RowBox[{
+          "couplingEstimate", "\[LeftDoubleBracket]", "2", 
+           "\[RightDoubleBracket]"}]}], "\[IndentingNewLine]", "]"}], ";"}], 
+       "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{"Return", " ", "Output", " ", 
         RowBox[{"{", 
@@ -344,9 +361,10 @@ Cell[BoxData[{
    3.811429269825501*^9, {3.811432189255144*^9, 3.811432193426942*^9}, {
    3.811488139684546*^9, 3.811488158320015*^9}, {3.811488391219201*^9, 
    3.811488571720373*^9}, 3.811488735501358*^9, {3.8114888066073227`*^9, 
-   3.811488809726366*^9}},
- CellLabel->
-  "In[111]:=",ExpressionUUID->"0edce7f9-b1bd-4e35-a568-b63a7047e279"]
+   3.811488809726366*^9}, {3.855382009934535*^9, 3.855382013569675*^9}, {
+   3.855382097904049*^9, 3.855382105508861*^9}, {3.8554960800466967`*^9, 
+   3.855496086214279*^9}},
+ CellLabel->"In[67]:=",ExpressionUUID->"0edce7f9-b1bd-4e35-a568-b63a7047e279"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -521,8 +539,7 @@ Cell[BoxData[{
      "\[IndentingNewLine]", 
      RowBox[{"centeredX", "=", 
       FractionBox[
-       RowBox[{"X", "-", "medianX"}], "scaleX"]}], ";", "\[IndentingNewLine]",
-      "\[IndentingNewLine]", 
+       RowBox[{"X", "-", "medianX"}], "scaleX"]}], ";", "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
       RowBox[{"Select", " ", "subsamples"}], " ", "*)"}], 
      "\[IndentingNewLine]", 
@@ -1068,9 +1085,9 @@ Cell[BoxData[{
    3.811429034111147*^9, 3.811429082126021*^9}, {3.811429256371418*^9, 
    3.8114292563784857`*^9}, {3.826980705257543*^9, 3.826980728021558*^9}, {
    3.826990692402212*^9, 3.8269906931896467`*^9}, {3.826990809329866*^9, 
-   3.826990829472777*^9}},
- CellLabel->
-  "In[114]:=",ExpressionUUID->"95d64087-d76d-468f-9869-f6395521c94f"]
+   3.826990829472777*^9}, {3.855465469461851*^9, 3.8554654886349077`*^9}, 
+   3.855465607884447*^9, {3.855467772993352*^9, 3.855467773565877*^9}},
+ CellLabel->"In[70]:=",ExpressionUUID->"95d64087-d76d-468f-9869-f6395521c94f"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1542,8 +1559,7 @@ Cell[BoxData[{
    3.811407607807864*^9, 3.81140760945691*^9}, 3.811428984613902*^9, 
    3.811429123181746*^9, {3.8114292563816643`*^9, 3.811429256386853*^9}, 
    3.826990857467559*^9},
- CellLabel->
-  "In[117]:=",ExpressionUUID->"f6b8a2a7-aa1b-46b2-9dd9-cdf4f56c517b"]
+ CellLabel->"In[73]:=",ExpressionUUID->"f6b8a2a7-aa1b-46b2-9dd9-cdf4f56c517b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1628,233 +1644,241 @@ Cell[BoxData[{
       "numPriorEsts", ",", "allXeqXVar", ",", " ", "estsVar", ",", 
        "combinedEstsVar", ",", "centeredX", ",", "meanEsts", ",", " ", 
        "stdEsts", ",", "XeqX", ",", "lengthXeqX", ",", "meanXeqX"}], "}"}], 
-     ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"If", "[", 
-      RowBox[{
-       RowBox[{"OptionValue", "[", "\"\<logQ\>\"", "]"}], ",", 
-       "\[IndentingNewLine]", 
-       RowBox[{"(*", " ", 
-        RowBox[{
-         RowBox[{"Estimate", " ", "coupling", " ", "using", " ", "log"}], "-", 
-         RowBox[{"average", " ", "of", " ", "the", " ", "samples"}]}], " ", 
-        "*)"}], "\[IndentingNewLine]", 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"Quiet", "[", " ", 
+      RowBox[{"(*", " ", 
        RowBox[{
-        RowBox[{"FindRoot", "[", 
+       "Warnings", " ", "generated", " ", "by", " ", "EstimateCRVCoupling", 
+        " ", "have", " ", "not", " ", "impacted", " ", "calculation"}], " ", 
+       "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"OptionValue", "[", "\"\<logQ\>\"", "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
          RowBox[{
+          RowBox[{"Estimate", " ", "coupling", " ", "using", " ", "log"}], 
+          "-", 
+          RowBox[{"average", " ", "of", " ", "the", " ", "samples"}]}], " ", 
+         "*)"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"FindRoot", "[", 
           RowBox[{
-           RowBox[{"2", 
-            RowBox[{"Log", "[", "\[Sigma]", "]"}]}], "==", 
            RowBox[{
-            RowBox[{"Log", "[", 
-             RowBox[{"4", "\[Kappa]"}], "]"}], "+", " ", 
-            RowBox[{"HarmonicNumber", "[", 
-             RowBox[{
-              RowBox[{"-", "1"}], "+", 
-              FractionBox["1", 
-               RowBox[{"2", "\[Kappa]"}]]}], "]"}], "+", 
             RowBox[{"2", 
-             RowBox[{"Mean", "[", 
-              RowBox[{"Log", "[", 
-               RowBox[{"Abs", "[", 
-                RowBox[{"X", "-", "\[Mu]"}], "]"}], "]"}], "]"}]}]}]}], ",", 
-          RowBox[{"{", 
-           RowBox[{"\[Kappa]", ",", "1"}], "}"}]}], "]"}], 
-        "\[LeftDoubleBracket]", 
-        RowBox[{"All", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"(*", " ", 
+             RowBox[{"Log", "[", "\[Sigma]", "]"}]}], "==", 
+            RowBox[{
+             RowBox[{"Log", "[", 
+              RowBox[{"4", "\[Kappa]"}], "]"}], "+", " ", 
+             RowBox[{"HarmonicNumber", "[", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", 
+               FractionBox["1", 
+                RowBox[{"2", "\[Kappa]"}]]}], "]"}], "+", 
+             RowBox[{"2", 
+              RowBox[{"Mean", "[", 
+               RowBox[{"Log", "[", 
+                RowBox[{"Abs", "[", 
+                 RowBox[{"X", "-", "\[Mu]"}], "]"}], "]"}], "]"}]}]}]}], ",", 
+           
+           RowBox[{"{", 
+            RowBox[{"\[Kappa]", ",", "1"}], "}"}]}], "]"}], 
+         "\[LeftDoubleBracket]", 
+         RowBox[{"All", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+         "Estimate", " ", "coupling", " ", "using", " ", "quadruple", " ", 
+          "subsample", " ", "approximates"}], " ", "*)"}], 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+         "set", " ", "inputs", " ", "to", " ", "variables", " ", "for", " ", 
+          "updates", " ", "to", " ", "recursion"}], " ", "*)"}], 
+        "\[IndentingNewLine]", 
         RowBox[{
-        "Estimate", " ", "coupling", " ", "using", " ", "quadruple", " ", 
-         "subsample", " ", "approximates"}], " ", "*)"}], 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"(*", " ", 
-        RowBox[{
-        "set", " ", "inputs", " ", "to", " ", "variables", " ", "for", " ", 
-         "updates", " ", "to", " ", "recursion"}], " ", "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"allXeqXVar", "=", "allXeqX"}], ";", " ", 
-        RowBox[{"estsVar", "=", "ests"}], ";", 
-        RowBox[{"combinedEstsVar", "=", "combinedEsts"}], ";", 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", 
-        RowBox[{"(*", " ", 
-         RowBox[{
-         "Update", " ", "and", " ", "periodically", " ", "print", " ", "the", 
-          " ", "current", " ", "estimate"}], " ", "*)"}], 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", 
-        RowBox[{"numPriorEsts", " ", "=", 
-         RowBox[{"Length", "[", "ests", "]"}]}], ";", "\[IndentingNewLine]", 
-        "\[IndentingNewLine]", 
-        RowBox[{"(*", " ", 
-         RowBox[{
-         "Center", " ", "and", " ", "scale", " ", "the", " ", "samples", " ", 
-          "using", " ", "the", " ", "input", " ", "mean", " ", "and", " ", 
-          "scale"}], " ", "*)"}], "\[IndentingNewLine]", 
-        RowBox[{"centeredX", "=", 
-         FractionBox[
-          RowBox[{"X", "-", "\[Mu]"}], "\[Sigma]"]}], ";", 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", 
-        RowBox[{"(*", " ", 
-         RowBox[{
-         "Compute", " ", "new", " ", "estimates", " ", "and", " ", 
-          "accumulate", " ", "inputs"}], " ", "*)"}], "\[IndentingNewLine]", 
-        "\[IndentingNewLine]", 
-        RowBox[{"(*", " ", 
-         RowBox[{
-          RowBox[{"Select", " ", "Subsamples", " ", "along", " ", "4"}], "-", 
-          
-          RowBox[{"dimensional", " ", "diagonals"}]}], 
-         StyleBox[" ",
-          FontSlant->"Italic"], 
-         StyleBox["*)",
-          FontSlant->"Italic"]}], "\[IndentingNewLine]", 
-        "\[IndentingNewLine]", 
-        RowBox[{"XeqX", "=", 
-         RowBox[{"SelectEqualSamples", "[", 
-          RowBox[{"centeredX", ",", "4", ",", "\[IndentingNewLine]", 
-           RowBox[{"OptionValue", "[", "\"\<sampleRange\>\"", "]"}], ",", 
-           "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"OptionValue", "[", "\"\<iterations\>\"", "]"}], 
-            "\[LeftDoubleBracket]", "\"\<iterateRec\>\"", 
-            "\[RightDoubleBracket]"}], ",", "\[IndentingNewLine]", 
-           RowBox[{"\"\<cloudQ\>\"", "\[Rule]", 
-            RowBox[{"OptionValue", "[", "\"\<cloudQ\>\"", "]"}]}]}], 
-          "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"(*", 
-         RowBox[{
-          RowBox[{"Echo", "[", "XeqX", "]"}], ";"}], "*)"}], 
-        "\[IndentingNewLine]", 
-        RowBox[{"(*", " ", 
-         RowBox[{
-          RowBox[{"update", " ", "allXeqX"}], ",", " ", 
-          RowBox[{"ests", " ", "and", " ", "combinedEsts"}]}], " ", "*)"}], 
-        "\[IndentingNewLine]", 
-        RowBox[{"If", "[", 
-         RowBox[{
-          RowBox[{"OptionValue", "[", "\"\<saveXeqX\>\"", "]"}], ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{"allXeqXVar", "=", 
-           RowBox[{"Append", "[", 
-            RowBox[{"allXeqXVar", ",", "XeqX"}], "]"}]}]}], 
-         "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-        RowBox[{"(*", " ", 
-         RowBox[{
-         "Assumes", " ", "input", " ", "has", " ", "good", " ", "estimate", 
-          " ", "of", " ", "\[Sigma]"}], " ", "*)"}], "\[IndentingNewLine]", 
-        "\[IndentingNewLine]", 
-        RowBox[{"estsVar", "=", 
-         RowBox[{"Append", "[", 
-          RowBox[{"estsVar", ",", 
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{"1", "/", 
-              RowBox[{"Moment", "[", 
-               RowBox[{"XeqX", ",", "2"}], "]"}]}], ")"}], "-", "4"}]}], 
-          "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"(*", " ", 
-         RowBox[{"Check", " ", "assumption", " ", "regarding", " ", "mean"}], 
-         " ", "*)"}], "\[IndentingNewLine]", 
-        RowBox[{"If", "[", 
-         RowBox[{
+         RowBox[{"allXeqXVar", "=", "allXeqX"}], ";", " ", 
+         RowBox[{"estsVar", "=", "ests"}], ";", 
+         RowBox[{"combinedEstsVar", "=", "combinedEsts"}], ";", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
           RowBox[{
-           RowBox[{"(", 
-            RowBox[{"meanXeqX", "=", 
-             RowBox[{"Abs", "[", 
-              RowBox[{"Mean", "[", "XeqX", "]"}], "]"}]}], ")"}], ">", 
-           "0.2"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"Message", "[", 
-           RowBox[{
-            RowBox[{"EstimateCRVCoupling", "::", "mean"}], ",", "meanXeqX", 
-            ",", "0.2"}], "]"}]}], "\[IndentingNewLine]", "]"}], ";", 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", 
-        RowBox[{"(*", " ", 
-         RowBox[{"Append", " ", "combined", " ", "estimates"}], " ", "*)"}], 
-        "\[IndentingNewLine]", 
-        RowBox[{"lengthXeqX", "=", 
-         RowBox[{"Length", "[", "XeqX", "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"combinedEstsVar", " ", "=", 
-         RowBox[{"Append", "[", 
-          RowBox[{"combinedEstsVar", ",", "\[IndentingNewLine]", 
-           RowBox[{"{", "\[IndentingNewLine]", 
-            RowBox[{"(*", " ", 
-             RowBox[{
-             "Around", " ", "used", " ", "to", " ", "compute", " ", "mean", 
-              " ", "and", " ", "standard", " ", "deviation", " ", "of", " ", 
-              "estsVar"}], " ", "*)"}], "\[IndentingNewLine]", 
-            RowBox[{"(*", " ", 
-             RowBox[{
-             "For", " ", "first", " ", "estimate", " ", "assume", " ", 
-              "large", " ", "uncertainty"}], " ", "*)"}], 
+          "Update", " ", "and", " ", "periodically", " ", "print", " ", "the",
+            " ", "current", " ", "estimate"}], " ", "*)"}], 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"numPriorEsts", " ", "=", 
+          RowBox[{"Length", "[", "ests", "]"}]}], ";", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "Center", " ", "and", " ", "scale", " ", "the", " ", "samples", " ",
+            "using", " ", "the", " ", "input", " ", "mean", " ", "and", " ", 
+           "scale"}], " ", "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"centeredX", "=", 
+          FractionBox[
+           RowBox[{"X", "-", "\[Mu]"}], "\[Sigma]"]}], ";", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "Compute", " ", "new", " ", "estimates", " ", "and", " ", 
+           "accumulate", " ", "inputs"}], " ", "*)"}], "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+           RowBox[{"Select", " ", "Subsamples", " ", "along", " ", "4"}], "-", 
+           RowBox[{"dimensional", " ", "diagonals"}]}], 
+          StyleBox[" ",
+           FontSlant->"Italic"], 
+          StyleBox["*)",
+           FontSlant->"Italic"]}], "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", 
+         RowBox[{"XeqX", "=", 
+          RowBox[{"SelectEqualSamples", "[", 
+           RowBox[{"centeredX", ",", "4", ",", "\[IndentingNewLine]", 
+            RowBox[{"OptionValue", "[", "\"\<sampleRange\>\"", "]"}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{
-             RowBox[{"If", "[", 
-              RowBox[{
-               RowBox[{"numPriorEsts", " ", "\[Equal]", "0"}], ",", 
-               RowBox[{"Around", "[", 
-                RowBox[{
-                 RowBox[{
-                 "estsVar", "\[LeftDoubleBracket]", "1", 
-                  "\[RightDoubleBracket]"}], ",", 
-                 RowBox[{
-                 "estsVar", "\[LeftDoubleBracket]", "1", 
-                  "\[RightDoubleBracket]"}]}], "]"}], ",", " ", 
-               RowBox[{"Around", "[", "estsVar", "]"}]}], "]"}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"If", "[", 
-              RowBox[{
-               RowBox[{"numPriorEsts", " ", "\[Equal]", "0"}], ",", 
-               "lengthXeqX", ",", 
-               RowBox[{
-                RowBox[{"combinedEstsVar", "\[LeftDoubleBracket]", 
-                 RowBox[{
-                  RowBox[{"-", "1"}], ",", "2"}], "\[RightDoubleBracket]"}], 
-                "+", "lengthXeqX"}]}], "]"}]}], "\[IndentingNewLine]", 
-            "}"}]}], "\[IndentingNewLine]", "]"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"(*", "  ", 
-         RowBox[{
-         "Decide", " ", "whether", " ", "to", " ", "end", " ", "recursion"}], 
-         " ", "*)"}], "\[IndentingNewLine]", 
-        RowBox[{"(*", " ", 
-         RowBox[{"Check", " ", "number", " ", "of", " ", "estimates"}], " ", 
-         "*)"}], "\[IndentingNewLine]", 
-        RowBox[{"(*", " ", 
-         RowBox[{
-         "An", " ", "adapative", " ", "test", " ", "of", " ", "precision", 
-          " ", "to", " ", "be", " ", "added"}], " ", "*)"}], 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", 
-        RowBox[{"If", "[", 
-         RowBox[{
+             RowBox[{"OptionValue", "[", "\"\<iterations\>\"", "]"}], 
+             "\[LeftDoubleBracket]", "\"\<iterateRec\>\"", 
+             "\[RightDoubleBracket]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<cloudQ\>\"", "\[Rule]", 
+             RowBox[{"OptionValue", "[", "\"\<cloudQ\>\"", "]"}]}]}], 
+           "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"(*", 
           RowBox[{
-           RowBox[{"numPriorEsts", "+", "1"}], "\[Equal]", 
+           RowBox[{"Echo", "[", "XeqX", "]"}], ";"}], "*)"}], 
+         "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+           RowBox[{"update", " ", "allXeqX"}], ",", " ", 
+           RowBox[{"ests", " ", "and", " ", "combinedEsts"}]}], " ", "*)"}], 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"OptionValue", "[", "\"\<saveXeqX\>\"", "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"allXeqXVar", "=", 
+            RowBox[{"Append", "[", 
+             RowBox[{"allXeqXVar", ",", "XeqX"}], "]"}]}]}], 
+          "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "Assumes", " ", "input", " ", "has", " ", "good", " ", "estimate", 
+           " ", "of", " ", "\[Sigma]"}], " ", "*)"}], "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", 
+         RowBox[{"estsVar", "=", 
+          RowBox[{"Append", "[", 
+           RowBox[{"estsVar", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "/", 
+               RowBox[{"Moment", "[", 
+                RowBox[{"XeqX", ",", "2"}], "]"}]}], ")"}], "-", "4"}]}], 
+           "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Check", " ", "assumption", " ", "regarding", " ", "mean"}],
+           " ", "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
            RowBox[{
-            RowBox[{"OptionValue", "[", "\"\<iterations\>\"", "]"}], 
-            "\[LeftDoubleBracket]", "\"\<iterateRec\>\"", 
-            "\[RightDoubleBracket]"}]}], ",", "\[IndentingNewLine]", 
-          "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"<|", 
+            RowBox[{"(", 
+             RowBox[{"meanXeqX", "=", 
+              RowBox[{"Abs", "[", 
+               RowBox[{"Mean", "[", "XeqX", "]"}], "]"}]}], ")"}], ">", 
+            "0.2"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Message", "[", 
+            RowBox[{
+             RowBox[{"EstimateCRVCoupling", "::", "mean"}], ",", "meanXeqX", 
+             ",", "0.2"}], "]"}]}], "\[IndentingNewLine]", "]"}], ";", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Append", " ", "combined", " ", "estimates"}], " ", "*)"}], 
+         "\[IndentingNewLine]", 
+         RowBox[{"lengthXeqX", "=", 
+          RowBox[{"Length", "[", "XeqX", "]"}]}], ";", "\[IndentingNewLine]", 
+         
+         RowBox[{"combinedEstsVar", " ", "=", 
+          RowBox[{"Append", "[", 
+           RowBox[{"combinedEstsVar", ",", "\[IndentingNewLine]", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{"(*", " ", 
+              RowBox[{
+              "Around", " ", "used", " ", "to", " ", "compute", " ", "mean", 
+               " ", "and", " ", "standard", " ", "deviation", " ", "of", " ", 
+               "estsVar"}], " ", "*)"}], "\[IndentingNewLine]", 
+             RowBox[{"(*", " ", 
+              RowBox[{
+              "For", " ", "first", " ", "estimate", " ", "assume", " ", 
+               "large", " ", "uncertainty"}], " ", "*)"}], 
+             "\[IndentingNewLine]", 
              RowBox[{
-              RowBox[{"\"\<lowestVariability\>\"", "\[Rule]", 
-               RowBox[{"(", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"numPriorEsts", " ", "\[Equal]", "0"}], ",", 
+                RowBox[{"Around", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "estsVar", "\[LeftDoubleBracket]", "1", 
+                   "\[RightDoubleBracket]"}], ",", 
+                  RowBox[{
+                  "estsVar", "\[LeftDoubleBracket]", "1", 
+                   "\[RightDoubleBracket]"}]}], "]"}], ",", " ", 
+                RowBox[{"Around", "[", "estsVar", "]"}]}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"numPriorEsts", " ", "\[Equal]", "0"}], ",", 
+                "lengthXeqX", ",", 
                 RowBox[{
-                 RowBox[{"TakeSmallestBy", "[", 
-                  RowBox[{"combinedEstsVar", ",", 
-                   RowBox[{
+                 RowBox[{"combinedEstsVar", "\[LeftDoubleBracket]", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "2"}], "\[RightDoubleBracket]"}], 
+                 "+", "lengthXeqX"}]}], "]"}]}], "\[IndentingNewLine]", 
+             "}"}]}], "\[IndentingNewLine]", "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"(*", "  ", 
+          RowBox[{
+          "Decide", " ", "whether", " ", "to", " ", "end", " ", "recursion"}],
+           " ", "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Check", " ", "number", " ", "of", " ", "estimates"}], " ", 
+          "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "An", " ", "adapative", " ", "test", " ", "of", " ", "precision", 
+           " ", "to", " ", "be", " ", "added"}], " ", "*)"}], 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"numPriorEsts", "+", "1"}], "\[Equal]", 
+            RowBox[{
+             RowBox[{"OptionValue", "[", "\"\<iterations\>\"", "]"}], 
+             "\[LeftDoubleBracket]", "\"\<iterateRec\>\"", 
+             "\[RightDoubleBracket]"}]}], ",", "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"<|", 
+              RowBox[{
+               RowBox[{"\"\<lowestVariability\>\"", "\[Rule]", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"TakeSmallestBy", "[", 
+                   RowBox[{"combinedEstsVar", ",", 
+                    RowBox[{
                     RowBox[{
                     RowBox[{
                     "#", "\[LeftDoubleBracket]", "1", 
                     "\[RightDoubleBracket]"}], "[", "\"\<Uncertainty\>\"", 
                     "]"}], "&"}], ",", "1"}], "]"}], "//", "Flatten"}], 
-                ")"}]}], ",", "\[IndentingNewLine]", 
-              RowBox[{"\"\<lowestVarNearEnd\>\"", "\[Rule]", 
-               RowBox[{"(", 
-                RowBox[{
-                 RowBox[{"TakeSmallestBy", "[", 
-                  RowBox[{
-                   RowBox[{"combinedEstsVar", "\[LeftDoubleBracket]", 
+                 ")"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<lowestVarNearEnd\>\"", "\[Rule]", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"TakeSmallestBy", "[", 
+                   RowBox[{
+                    RowBox[{"combinedEstsVar", "\[LeftDoubleBracket]", 
                     RowBox[{
                     RowBox[{"Ceiling", "[", 
                     RowBox[{
@@ -1862,77 +1886,77 @@ Cell[BoxData[{
                     RowBox[{"numPriorEsts", "+", "1"}], ")"}], "/", "2"}], 
                     "]"}], ";;", 
                     RowBox[{"-", "1"}]}], "\[RightDoubleBracket]"}], ",", 
-                   RowBox[{
+                    RowBox[{
                     RowBox[{
                     RowBox[{
                     "#", "\[LeftDoubleBracket]", "1", 
                     "\[RightDoubleBracket]"}], "[", "\"\<Uncertainty\>\"", 
                     "]"}], "&"}], ",", "1"}], "]"}], "//", "Flatten"}], 
-                ")"}]}], ",", "\[IndentingNewLine]", 
-              RowBox[{"\"\<firstLast\>\"", "\[Rule]", 
-               RowBox[{"combinedEstsVar", "\[LeftDoubleBracket]", 
-                RowBox[{
-                 RowBox[{"{", 
-                  RowBox[{"1", ",", 
-                   RowBox[{"-", "1"}]}], "}"}], ",", "1"}], 
-                "\[RightDoubleBracket]"}]}], ",", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{
-                RowBox[{"\"\<minMax\>\"", "\[Rule]", 
-                 RowBox[{"{", 
-                  RowBox[{
-                   RowBox[{"MinimalBy", "[", 
-                    RowBox[{"#", ",", "\"\<Value\>\""}], "]"}], ",", 
-                   RowBox[{"MaximalBy", "[", 
-                    RowBox[{"#", ",", "\"\<Value\>\""}], "]"}]}], "}"}]}], 
-                "&"}], "/@", 
-               RowBox[{"{", 
+                 ")"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<firstLast\>\"", "\[Rule]", 
                 RowBox[{"combinedEstsVar", "\[LeftDoubleBracket]", 
-                 RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}], 
-                "}"}]}], ",", "\[IndentingNewLine]", 
-              RowBox[{"\"\<sampleRange\>\"", "\[Rule]", 
-               RowBox[{"OptionValue", "[", "\"\<sampleRange\>\"", "]"}]}], 
-              ",", "\[IndentingNewLine]", 
-              RowBox[{"\"\<allEst\>\"", "\[Rule]", "estsVar"}], ",", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"1", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", "1"}], 
+                 "\[RightDoubleBracket]"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"\"\<minMax\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"MinimalBy", "[", 
+                    RowBox[{"#", ",", "\"\<Value\>\""}], "]"}], ",", 
+                    RowBox[{"MaximalBy", "[", 
+                    RowBox[{"#", ",", "\"\<Value\>\""}], "]"}]}], "}"}]}], 
+                 "&"}], "/@", 
+                RowBox[{"{", 
+                 RowBox[{"combinedEstsVar", "\[LeftDoubleBracket]", 
+                  RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}], 
+                 "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<sampleRange\>\"", "\[Rule]", 
+                RowBox[{"OptionValue", "[", "\"\<sampleRange\>\"", "]"}]}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<allEst\>\"", "\[Rule]", "estsVar"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<allCombinedEsts\>\"", "\[Rule]", "combinedEstsVar"}]}], 
+              "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"ListPlot", "[", 
+              RowBox[{"allXeqXVar", ",", 
+               RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"PlotRange", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"Full", ",", "Full"}], "}"}]}]}], "]"}]}], 
+            "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", " ", 
+            RowBox[{
+            "Recursive", " ", "call", " ", "with", " ", "updated", " ", 
+             "estimates"}], " ", "*)"}], "\[IndentingNewLine]", 
+           RowBox[{"EstimateCRVCoupling", "[", 
+            RowBox[{
+            "X", ",", "\[Mu]", ",", "\[Sigma]", ",", "allXeqXVar", ",", 
+             "estsVar", ",", "combinedEstsVar", ",", "\[IndentingNewLine]", 
+             RowBox[{"\"\<sampleRange\>\"", "\[Rule]", 
+              RowBox[{"OptionValue", "[", "\"\<sampleRange\>\"", "]"}]}], ",",
               "\[IndentingNewLine]", 
-              RowBox[{
-              "\"\<allCombinedEsts\>\"", "\[Rule]", "combinedEstsVar"}]}], 
-             "\[IndentingNewLine]", "|>"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"ListPlot", "[", 
-             RowBox[{"allXeqXVar", ",", 
-              RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}], ",", 
-              "\[IndentingNewLine]", 
-              RowBox[{"PlotRange", "\[Rule]", 
-               RowBox[{"{", 
-                RowBox[{"Full", ",", "Full"}], "}"}]}]}], "]"}]}], 
-           "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
-          "\[IndentingNewLine]", 
-          RowBox[{"(*", " ", 
-           RowBox[{
-           "Recursive", " ", "call", " ", "with", " ", "updated", " ", 
-            "estimates"}], " ", "*)"}], "\[IndentingNewLine]", 
-          RowBox[{"EstimateCRVCoupling", "[", 
-           RowBox[{
-           "X", ",", "\[Mu]", ",", "\[Sigma]", ",", "allXeqXVar", ",", 
-            "estsVar", ",", "combinedEstsVar", ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<sampleRange\>\"", "\[Rule]", 
-             RowBox[{"OptionValue", "[", "\"\<sampleRange\>\"", "]"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<iterations\>\"", "\[Rule]", 
-             RowBox[{"OptionValue", "[", "\"\<iterations\>\"", "]"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<prec\>\"", "\[Rule]", 
-             RowBox[{"OptionValue", "[", "\"\<prec\>\"", "]"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<saveXeqX\>\"", "\[Rule]", 
-             RowBox[{"OptionValue", "[", "\"\<saveXeqX\>\"", "]"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<logQ\>\"", "\[Rule]", "False"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<cloudQ\>\"", "\[Rule]", 
-             RowBox[{"OptionValue", "[", "\"\<cloudQ\>\"", "]"}]}]}], 
-           "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
-      "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}], 
+             RowBox[{"\"\<iterations\>\"", "\[Rule]", 
+              RowBox[{"OptionValue", "[", "\"\<iterations\>\"", "]"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"\"\<prec\>\"", "\[Rule]", 
+              RowBox[{"OptionValue", "[", "\"\<prec\>\"", "]"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"\"\<saveXeqX\>\"", "\[Rule]", 
+              RowBox[{"OptionValue", "[", "\"\<saveXeqX\>\"", "]"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"\"\<logQ\>\"", "\[Rule]", "False"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"\"\<cloudQ\>\"", "\[Rule]", 
+              RowBox[{"OptionValue", "[", "\"\<cloudQ\>\"", "]"}]}]}], 
+            "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
+       "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}]}], "]"}]}], 
   ";"}]}], "Input",
  CellChangeTimes->{{3.809509964799526*^9, 3.8095100041909027`*^9}, {
    3.8095102548655*^9, 3.809510293931223*^9}, {3.809510392088382*^9, 
@@ -1975,9 +1999,9 @@ Cell[BoxData[{
    3.811333022809074*^9, 3.811333027848308*^9}, {3.811333361669797*^9, 
    3.811333364208466*^9}, {3.81133364476507*^9, 3.811333648528124*^9}, 
    3.811428992346469*^9, 3.811429147591947*^9, {3.8114292563915443`*^9, 
-   3.811429256398018*^9}, 3.826990871839328*^9},
- CellLabel->
-  "In[120]:=",ExpressionUUID->"a215ea0b-5360-4812-a572-7a4cab257fb0"]
+   3.811429256398018*^9}, 3.826990871839328*^9, {3.855495578260436*^9, 
+   3.855495621511269*^9}},
+ CellLabel->"In[76]:=",ExpressionUUID->"a215ea0b-5360-4812-a572-7a4cab257fb0"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2355,14 +2379,13 @@ Cell[BoxData[{
    3.811428817556497*^9, 3.8114288249151487`*^9}, {3.811429256401415*^9, 
    3.811429256403819*^9}, {3.826764000546072*^9, 3.826764004435409*^9}, {
    3.8267706636425734`*^9, 3.826770711585422*^9}},
- CellLabel->
-  "In[124]:=",ExpressionUUID->"7eacef9c-7477-4ff2-96cd-edbce6a60a47"]
+ CellLabel->"In[80]:=",ExpressionUUID->"7eacef9c-7477-4ff2-96cd-edbce6a60a47"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 755},
-WindowMargins->{{48, Automatic}, {Automatic, 6}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+WindowMargins->{{Automatic, 27}, {19, Automatic}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"049d35b7-abd2-4e2a-817b-f0d915aec296"
 ]
@@ -2384,25 +2407,25 @@ Cell[1866, 46, 1264, 22, 242, "Text",ExpressionUUID->"e37a4777-ec6f-4b98-9e9b-00
 Cell[CellGroupData[{
 Cell[3155, 72, 177, 3, 54, "Subsection",ExpressionUUID->"1334e682-8061-4ca9-bfe0-823ea1f78a7b"],
 Cell[3335, 77, 643, 17, 219, "Text",ExpressionUUID->"601da92a-72b2-44cd-a157-1bf375514ee2"],
-Cell[3981, 96, 1180, 24, 73, "Input",ExpressionUUID->"6919b575-cb7e-4124-be6f-2fd7588b11c7"],
-Cell[5164, 122, 10984, 226, 1228, "Input",ExpressionUUID->"0edce7f9-b1bd-4e35-a568-b63a7047e279"]
+Cell[3981, 96, 1176, 23, 73, "Input",ExpressionUUID->"6919b575-cb7e-4124-be6f-2fd7588b11c7"],
+Cell[5160, 121, 11863, 245, 1342, "Input",ExpressionUUID->"0edce7f9-b1bd-4e35-a568-b63a7047e279"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16185, 353, 163, 3, 54, "Subsection",ExpressionUUID->"9526400b-f859-4e01-84b1-e56264e2f9e5"],
-Cell[16351, 358, 1892, 34, 472, "Text",ExpressionUUID->"b13805b6-a4bb-4178-83b6-255bd0fa4e30"],
-Cell[18246, 394, 39137, 678, 2585, "Input",ExpressionUUID->"95d64087-d76d-468f-9869-f6395521c94f"]
+Cell[17060, 371, 163, 3, 54, "Subsection",ExpressionUUID->"9526400b-f859-4e01-84b1-e56264e2f9e5"],
+Cell[17226, 376, 1892, 34, 472, "Text",ExpressionUUID->"b13805b6-a4bb-4178-83b6-255bd0fa4e30"],
+Cell[19121, 412, 39224, 677, 2568, "Input",ExpressionUUID->"95d64087-d76d-468f-9869-f6395521c94f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[57420, 1077, 164, 3, 54, "Subsection",ExpressionUUID->"2662aced-5062-4917-b71f-e8ee44b03454"],
-Cell[57587, 1082, 23998, 463, 2374, "Input",ExpressionUUID->"f6b8a2a7-aa1b-46b2-9dd9-cdf4f56c517b"]
+Cell[58382, 1094, 164, 3, 54, "Subsection",ExpressionUUID->"2662aced-5062-4917-b71f-e8ee44b03454"],
+Cell[58549, 1099, 23994, 462, 2378, "Input",ExpressionUUID->"f6b8a2a7-aa1b-46b2-9dd9-cdf4f56c517b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[81622, 1550, 169, 3, 54, "Subsection",ExpressionUUID->"a71e8706-6e99-4833-8f0c-42765626dcea"],
-Cell[81794, 1555, 20254, 424, 2306, "Input",ExpressionUUID->"a215ea0b-5360-4812-a572-7a4cab257fb0"]
+Cell[82580, 1566, 169, 3, 54, "Subsection",ExpressionUUID->"a71e8706-6e99-4833-8f0c-42765626dcea"],
+Cell[82752, 1571, 20859, 432, 2337, "Input",ExpressionUUID->"a215ea0b-5360-4812-a572-7a4cab257fb0"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[102085, 1984, 174, 3, 54, "Subsection",ExpressionUUID->"3b0bf7ca-7cd3-43c1-a4a7-969630adc42a"],
-Cell[102262, 1989, 18238, 369, 1522, "Input",ExpressionUUID->"7eacef9c-7477-4ff2-96cd-edbce6a60a47"]
+Cell[103648, 2008, 174, 3, 54, "Subsection",ExpressionUUID->"3b0bf7ca-7cd3-43c1-a4a7-969630adc42a"],
+Cell[103825, 2013, 18234, 368, 1522, "Input",ExpressionUUID->"7eacef9c-7477-4ff2-96cd-edbce6a60a47"]
 }, Open  ]]
 }, Open  ]]
 }
